@@ -6,3 +6,4 @@ class Keyboard(models.Model):
 	name = models.CharField(max_length=90)
 	description = models.CharField(max_length=300)
 	date_added = models.DateTimeField('date added')
+	switch = models.ForeignKey('switches.Switch', null=True, on_delete=models.SET_NULL)
