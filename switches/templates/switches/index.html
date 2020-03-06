@@ -1,0 +1,19 @@
+<h1>Switch Index</h1>
+{% if latest_switch_list %}
+<ul>
+	{% for switch in latest_switch_list %}
+	<li>
+		<a href="{% url 'switches:detail' switch.id %}">
+			{{ switch.name }}
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+{% else %}
+<p>No switches are available.</p>
+{% endif %}
+<p>
+	<a href='./new/'>
+		Create a new switch
+	</a>
+</p>
