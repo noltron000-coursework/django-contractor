@@ -6,7 +6,9 @@ app_name = 'keys'
 
 urlpatterns = [
 	# ex: /keys/
-	path('', views.index, name='index'),
+	path('', views.IndexView.as_view(), name='index'),
+	# # ex: /keys/new/
+	# path('new/', views.CreateView.as_view, name='new'),
 	# ex: /keys/5/
-	path('<int:key_id>/', views.detail, name='detail'),
+	path('<int:pk>/', views.DetailView.as_view(), name='detail'),
 ]

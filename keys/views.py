@@ -1,21 +1,20 @@
-from django.http import Http404
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
-from django.template import loader
+from django.urls import reverse
+from django.views import generic
 
 from .models import Key
 
 
-def index(request):
-	latest_key_list = Key.objects.order_by('-date_added')[:5]
-	template = loader.get_template('keys/index.html')
-	context = {
-		'latest_key_list': latest_key_list,
-	}
-	return render(request, 'keys/index.html', context)
+class IndexView(generic.ListView):
+	def get_queryset(self):
+		'''Return the last five published keys.'''
+		return Key.objects.order_by('-date_added')
 
-def detail(request, key_id):
-	key = get_object_or_404(Key, pk=key_id)
-	context = {
-		'key': key,
-	}
-	return render(request, 'keys/detail.html', context)
+	template_name = 'keys/index.html'
+	context_object_name = 'latest_key_list'
+
+
+class DetailView(generic.DetailView):
+	model = Key
+	template_name = 'keys/detail.html'
