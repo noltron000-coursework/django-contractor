@@ -1,0 +1,13 @@
+{% if latest_key_list %}
+	<ul>
+	{% for key in latest_key_list %}
+		<li>
+			<a href="/keys/{{ key.id }}/">
+				{{ key.name }}
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No keys are available.</p>
+{% endif %}
