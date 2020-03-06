@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+from django.http import Http404
+from django.shortcuts import render
 from django.template import loader
 
 from .models import Key
@@ -10,8 +11,14 @@ def index(request):
 	context = {
 		'latest_key_list': latest_key_list,
 	}
-	return HttpResponse(template.render(context, request))
-
+	return render(request, 'keys/index.html', context)
 
 def detail(request, key_id):
-	return HttpResponse(f'You\'re looking at key {key_id}.')
+	try:
+		key = Key.objects.get(pk=key_id)
+	except Key.DoesNotExist:
+		raise Http404("Key does not exist")
+	context = {
+		'key': key,
+	}
+	return render(request, 'keys/detail.html', context)
