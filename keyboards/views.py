@@ -3,18 +3,18 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 
-from .models import Switch
+from .models import Keyboard
 
 
 class IndexView(generic.ListView):
 	def get_queryset(self):
-		'''Return the last five published switches.'''
-		return Switch.objects.order_by('-date_added')
+		'''Return the last five published keyboards.'''
+		return Keyboard.objects.order_by('-date_added')
 
-	template_name = 'switches/index.html'
+	template_name = 'keyboards/index.html'
 	context_object_name = 'latest_key_list'
 
 
 class DetailView(generic.DetailView):
-	model = Switch
-	template_name = 'switches/detail.html'
+	model = Keyboard
+	template_name = 'keyboards/detail.html'
