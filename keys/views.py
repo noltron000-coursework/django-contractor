@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.template import loader
 
 from .models import Key
@@ -14,10 +14,7 @@ def index(request):
 	return render(request, 'keys/index.html', context)
 
 def detail(request, key_id):
-	try:
-		key = Key.objects.get(pk=key_id)
-	except Key.DoesNotExist:
-		raise Http404("Key does not exist")
+	key = get_object_or_404(Key, pk=key_id)
 	context = {
 		'key': key,
 	}
