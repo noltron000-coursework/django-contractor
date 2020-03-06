@@ -1,13 +1,19 @@
+<h1>Key Index</h1>
 {% if latest_key_list %}
-	<ul>
+<ul>
 	{% for key in latest_key_list %}
-		<li>
-			<a href="{% url 'keys:detail' key.id %}">
-				{{ key.name }}
-			</a>
-		</li>
+	<li>
+		<a href="{% url 'keys:detail' key.id %}">
+			{{ key.name }}
+		</a>
+	</li>
 	{% endfor %}
-	</ul>
+</ul>
 {% else %}
-	<p>No keys are available.</p>
+<p>No keys are available.</p>
 {% endif %}
+<p>
+	<a href='./new/'>
+		Create a new key
+	</a>
+</p>
