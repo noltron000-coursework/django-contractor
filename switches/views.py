@@ -12,7 +12,6 @@ class IndexView(generic.ListView):
 		return Switch.objects.order_by('-date_added')
 
 	template_name = 'switches/index.html'
-	context_object_name = 'latest_key_list'
 
 
 class DetailView(generic.DetailView):

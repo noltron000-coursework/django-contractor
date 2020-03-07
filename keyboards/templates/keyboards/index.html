@@ -1,7 +1,7 @@
 <h1>Keyboard Index</h1>
-{% if latest_keyboard_list %}
+{% if keyboard_list %}
 <ul>
-	{% for keyboard in latest_keyboard_list %}
+	{% for keyboard in keyboard_list %}
 	<li>
 		<a href="{% url 'keyboards:detail' keyboard.id %}">
 			{{ keyboard.name }}

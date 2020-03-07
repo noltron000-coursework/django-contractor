@@ -1,7 +1,7 @@
 <h1>Switch Index</h1>
-{% if latest_switch_list %}
+{% if switch_list %}
 <ul>
-	{% for switch in latest_switch_list %}
+	{% for switch in switch_list %}
 	<li>
 		<a href="{% url 'switches:detail' switch.id %}">
 			{{ switch.name }}
