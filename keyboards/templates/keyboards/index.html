@@ -1,0 +1,26 @@
+<h1>Keyboard Index</h1>
+{% if keyboard_list %}
+<ul>
+	{% for keyboard in keyboard_list %}
+	<li>
+		<a href="{% url 'keyboards:detail' keyboard.id %}">
+			{{ keyboard.name }}
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+{% else %}
+	<p>
+		No keyboards are available.
+	</p>
+{% endif %}
+<p>
+	<!--
+		== FIXME ==
+		The new path does not yet work!
+		<a href='./new/'>
+	--->
+	<a href='#'>
+		Create a new keyboard
+	</a>
+</p>
