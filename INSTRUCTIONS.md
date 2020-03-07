@@ -43,21 +43,21 @@ Each challenge is designed to add polish to your project and make your release s
 **NOTE**: Your project must score higher than a `70%` to pass.
 
 ### Project Requirements
-| Criteria                                   | Possible  |  Earned  | :ballot_box_with_check: Done ️ |
-|--------------------------------------------|-----------|----------|-------------------------------|
-| At least 2 apps in project                 | `40`      | `00`     |                               |
-| At least 2 tests in `tests.py` in each app | `30`      | `00`     |                               |
-| Modular design                             | `25`      | `00`     |                               |
-| RESTful API using Django REST Framework    | `25`      | `00`     |                               |
-| Template-based front-end interface         | `25`      | `00`     |                               |
-| Has purpose & fulfills proposal            | `20`      | `00`     |                               |
-| Integrates an open source app              | `20`      | `00`     |                               |
-| Deployed & usable                          | `15`      | `00`     |                               |
-| Includes database migrations in each app   | `15`      | `00`     |                               |
-| `README` with documentation                | `10`      | `00`     |                               |
-| Public GitHub repo                         |  `5`      | `00`     |                               |
-| No exposed secrets                         |  `5`      | `00`     |                               |
-| **TOTAL**                                  | **`235`** | **`00`** |                               |
+| Criteria                                   | Possible  |  Earned   | :ballot_box_with_check: Done |
+|--------------------------------------------|-----------|-----------|------------------------------|
+| At least 2 apps in project                 | `40`      | `40`      | :ballot_box_with_check:      |
+| At least 2 tests in `tests.py` in each app | `30`      |           |                              |
+| Modular design                             | `25`      | `25`      | :ballot_box_with_check:      |
+| RESTful API using Django REST Framework    | `25`      | `25`      | :ballot_box_with_check:      |
+| Template-based front-end interface         | `25`      | `25`      | :ballot_box_with_check:      |
+| Has purpose & fulfills proposal            | `20`      | `20`      | :ballot_box_with_check:      |
+| Integrates an open source app              | `20`      |           |                              |
+| Deployed & usable                          | `15`      |           |                              |
+| Includes database migrations in each app   | `15`      | `15`      | :ballot_box_with_check:      |
+| `README` with documentation                | `10`      | `10`      | :ballot_box_with_check:      |
+| Public GitHub repo                         |  `5`      |  `5`      | :ballot_box_with_check:      |
+| No exposed secrets                         |  `5`      |  `5`      | :ballot_box_with_check:      |
+| **TOTAL**                                  | **`235`** | **`170`** |                              |
 
 ### Bonus Points
 | Skill                             | Level-Up Opportunity                                                                  | Bonus Points | :ballot_box_with_check: Done ️ |
