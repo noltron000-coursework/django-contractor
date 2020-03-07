@@ -38,3 +38,4 @@ Thanks also to @Dani from Make School, and her team.
 [tutorial]: https://docs.djangoproject.com/en/3.0/intro/tutorial01/
 [proposal]: ./PROPOSAL.md
 [instructions]: ./INSTRUCTIONS.md
+[license]: ./LICENSE.md
