@@ -67,6 +67,6 @@ Each challenge is designed to add polish to your project and make your release s
 | :chart_with_upwards_trend: DevOps | Already a Heroku Master? Deploy on any virtual private server (DigitalOcean, AWS)     | `30`         |                               |
 
 [new]: https://github.com/new
-[syllabus]: ./README.md
-[proposal]: ./PROJECT.md
-[rubric]: ./RUBRIC.md
+[syllabus]: #Contractor-Project
+[proposal]: ./PROPOSAL.md
+[rubric]: #Project-Rubric
